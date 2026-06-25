@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thesis Repository CS Research Archive</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="thesistitle.css" />
+
+  
+</head>
+<body>
+
+<!-- PAGE 1  HOME-->
+<div id="page-home" class="page active">
+  <div class="home">
+    <nav class="nav">
+      <div class="nav-brand">
+        <div class="nav-logo">CS</div>
+        <div>
+          <div class="nav-title">Research Archive</div>
+          <div class="nav-subtitle">Computer Science Department</div>
+        </div>
+      </div>
+      
+
+<div class="nav-meta">Academic Year 2026-2027</div>
+    </nav>
+
+    <main class="hero">
+      <div class="hero-eyebrow anim-1">
+        <span></span> CS Thesis Repository
+      </div>
+      <h1 class="hero-headline anim-2">
+        Exploring the frontier of <em>Computer Science</em> research
+      </h1>
+      <p class="hero-sub anim-3">
+        A curated collection of undergraduate thesis titles and research abstracts from the College of Computer Science and Information Technology.
+      </p>
+      <div class="hero-actions anim-4">
+        <button class="btn btn-primary" onclick="goTo('page-titles')">
+          See Thesis Titles
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+      </div>
+    </main>
+
+    <div class="stats-bar anim-5">
+      <div class="stat-item">
+        <div class="stat-num" id="stat-count">0<span>+</span></div>
+        <div class="stat-label">Research Titles</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">4<span>+</span></div>
+        <div class="stat-label">Focus Areas</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">2026-2027</div>
+        <div class="stat-label">Latest Batch</div>
+      </div>
+    </div>
+
+    <footer class="home-footer">
+      <span class="footer-text"> 2026-2027 CS Research Archive</span>
+      <span class="footer-text">
+        Built for academic use
+        <span class="footer-dot"></span>
+        Computer Science Dept.
+      </span>
+    </footer>
+  </div>
+</div>
+
+
+<!--  PAGE 2  TITLES LIST -->
+<div id="page-titles" class="page">
+  <div class="titles-page">
+    <div class="page-header">
+      <button class="back-btn" onclick="goTo('page-home')">
+        <span class="back-arrow">←</span> Back to Home
+      </button>
+      <h1 class="page-title">Thesis Titles</h1>
+      <p class="page-desc">Browse all research titles click any card to view the full description.</p>
+    </div>
+
+    <div class="toolbar">
+      <div class="search-wrap">
+        <svg class="search-icon" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input class="search-input" type="text" placeholder="Search thesis titles or topicsâ€¦" id="search-input" oninput="filterCards()" />
+      </div>
+      <div class="count-badge"><strong id="count-shown">0</strong> / <span id="count-total">0</span> titles</div>
+    </div>
+
+    <div class="thesis-grid" id="thesis-grid"></div>
+  </div>
+</div>
+
+
+<!-- PAGE 3 DETAIL VIEW -->
+<div id="page-detail" class="page">
+  <div class="detail-page">
+    <div class="page-header">
+      <button class="back-btn" onclick="goTo('page-titles')">
+        <span class="back-arrow">←</span> Back to Titles
+      </button>
+      <div class="detail-index" id="detail-index"></div>
+      <h1 class="detail-title" id="detail-title"></h1>
+      <div class="detail-meta" id="detail-meta"></div>
+    </div>
+
+    <div class="detail-body">
+      <div>
+        <div class="detail-section">
+          <div class="section-eyebrow">Description</div>
+          <div class="detail-text" id="detail-desc"></div>
+        </div>
+        <div class="detail-section" id="detail-objectives-section">
+          <div class="section-eyebrow">Bisaya</div>
+          <div class="detail-text" id="detail-objectives"></div>
+        </div>
+      </div>
+
+      <div class="detail-sidebar">
+        <div class="sidebar-card">
+          <div class="sidebar-label">Thesis No.</div>
+          <div class="sidebar-value mono" id="sb-index"></div>
+        </div>
+        <div class="sidebar-card">
+          <div class="sidebar-label">Research Area</div>
+          <div class="sidebar-value" id="sb-area"></div>
+        </div>
+        <div class="sidebar-card">
+          <div class="sidebar-label">Keywords</div>
+          <div class="detail-meta" id="sb-tags" style="margin-top:.25rem"></div>
+        </div>
+        <div class="sidebar-card">
+          <div class="sidebar-label">Academic Year</div>
+          <div class="sidebar-value mono" id="sb-year"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="thesistitle.js"></script>
+</body>
+</html>
+
